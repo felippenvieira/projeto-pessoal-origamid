@@ -1,6 +1,7 @@
 body {
   display: grid;
-  margin: 0 auto;
+  grid-template-columns: 1fr;
+  align-items: center;
   font-family: "Fira Sans", sans-serif;
 }
 
@@ -15,12 +16,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 30px;
+  padding: 2.5rem 1.875rem;
 }
 
 nav ul {
   display: flex;
-  gap: 40px;
+  gap: 2.5rem;
 }
 
 a {
@@ -28,14 +29,20 @@ a {
 }
 
 .principal {
-  padding: 40px 30px;
+  padding: 2.5rem 1.875rem;
   display: grid;
-  grid-template-columns: minmax(100px, 350px) minmax(300px, 1fr);
-  gap: 140px;
+  grid-template-columns: minmax(200px, 350px) 1fr;
+  gap: 8.75rem;
   align-items: center;
 }
 
-.principal-img img {
+@media (max-width: 1100px) {
+  .principal {
+    gap: 4rem;
+  }
+}
+
+.principal img {
   max-width: 100%;
 }
 
@@ -45,8 +52,8 @@ a {
 }
 
 .principal-conteudo-titulo {
-  font-size: 72px;
-  line-height: 80px;
+  font-size: 4.5rem;
+  line-height: 5rem;
   font-weight: bold;
 }
 
@@ -60,22 +67,22 @@ a {
 }
 
 .principal-conteudo-texto {
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   color: #525252;
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 
 .experiencia {
-  padding: 80px 60px;
+  padding: 5rem 3.75rem;
   display: grid;
-  grid-template-columns: minmax(100px, 350px) minmax(300px, 1fr);
+  grid-template-columns: minmax(200px, 350px) 1fr;
 }
 
 .experiencia-titulo {
-  font-size: 144px;
+  font-size: 9rem;
   font-weight: bold;
-  line-height: 144px;
+  line-height: 9rem;
   color: #e0e0e0;
   word-wrap: break-word;
 }
@@ -85,8 +92,8 @@ a {
   max-width: 560px;
   color: #525252;
   padding-left: 20px;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   margin-bottom: 50px;
 }
 
@@ -98,12 +105,12 @@ a {
 .experiencia-box {
   display: grid;
   grid-template-columns: 50px 1fr;
-  gap: 40px;
+  gap: 2.5rem;
   margin-top: 20px;
 }
 
 .experiencia-box span {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 20px;
   text-align: right;
   padding-top: 20px;
@@ -116,16 +123,16 @@ a {
   background: #fafafa;
   padding: 20px;
   border-radius: 5px;
-  gap: 60px;
+  gap: 3.75rem;
   max-width: 630px;
   justify-content: space-between;
   border: 1px solid #f0f0f0;
 }
 
 .experiencia-box-card h2 {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
-  line-height: 20px;
+  line-height: 1.25rem;
 }
 
 .box-titulo {
@@ -133,26 +140,27 @@ a {
   max-width: 330px;
 }
 
-/* .box-titulo h2::before {
+.box-titulo h2::before {
   display: inline-block;
   position: absolute;
   content: "";
-  width: 400px;
-  height: 200px;
-  color: blue;
-} */
+  background: linear-gradient(180deg, #b6f829 0%, #67dd0a 100%);
+  width: 4px;
+  height: 20px;
+  left: -25px;
+}
 
 .box-titulo p {
   margin: 10px 0;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: #525252;
 }
 
 .box-resumo .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.625rem;
   margin: 10px 0;
 }
 
@@ -161,8 +169,8 @@ a {
   background: #fff;
   border-radius: 5px;
   color: #141414;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .formacao-bg {
@@ -172,20 +180,20 @@ a {
 .formacao {
   color: white;
   display: grid;
-  grid-template-columns: minmax(100px, 400px) minmax(300px, 1fr);
-  padding: 120px 0;
+  grid-template-columns: minmax(200px, 400px) 1fr;
+  padding: 7.5rem 0;
 }
 
 .formacao-titulo {
-  font-size: 144px;
+  font-size: 9rem;
   font-weight: bold;
   color: #000;
   word-wrap: break-word;
 }
 
 .formacao-texto {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   max-width: 520px;
   color: #a3a3a3;
   margin-bottom: 60px;
@@ -199,15 +207,26 @@ a {
 
 .formacao-cards {
   display: flex;
-  gap: 30px;
+  gap: 1.875rem;
   margin-left: 100px;
 }
 
 .formacao-card {
+  position: relative;
   padding: 20px;
   background: #090909;
   border-radius: 5px;
   width: 200px;
+}
+
+.formacao-card::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  background: linear-gradient(180deg, #b6f829 0%, #67dd0a 100%);
+  width: 4px;
+  height: 20px;
+  left: -4px;
 }
 
 .formacao-card span {
@@ -217,15 +236,15 @@ a {
 }
 
 .formacao-card h2 {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
-  line-height: 24px;
+  line-height: 1.5rem;
   margin-bottom: 50px;
 }
 
 .formacao-card p {
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
   color: #a3a3a3;
 }
 
@@ -240,12 +259,12 @@ a {
   display: grid;
   grid-template-columns: 30px 1fr;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   margin-bottom: 30px;
 }
 
 .curso-idioma-grid span {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   color: #8f8f8f;
   margin-top: 3px;
@@ -260,33 +279,34 @@ a {
 .texto-carga-horaria-grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .texto-carga-horaria p {
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
 }
 
 .texto-carga-horaria span {
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
   color: #8f8f8f;
 }
 
 .texto-idioma {
   margin-left: 40px;
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .texto-idioma span {
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
   color: #8f8f8f;
 }
 
 .footer-bg {
+  position: relative;
   background: #000;
   color: white;
   padding: 60px;
@@ -297,12 +317,21 @@ a {
   grid-template-columns: 1fr 1fr;
   padding: 60px 0;
   align-items: center;
-  gap: 100px;
+  gap: 6.25rem;
+}
+
+.footer-conteudo::before {
+  display: inline-block;
+  content: url("../img/detalhe.svg");
+  z-index: 1;
+  position: absolute;
+  left: 300px;
+  top: -70px;
 }
 
 .footer-conteudo-disponivel {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: #cccccc;
   max-width: 520px;
 }
@@ -310,14 +339,14 @@ a {
 .footer-conteudo-contatos {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  font-size: 36px;
+  gap: 1.875rem;
+  font-size: 2.25rem;
   font-weight: bold;
-  line-height: 40px;
+  line-height: 2.5rem;
 }
 
 footer .copy {
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 1.125rem;
+  line-height: 2rem;
   color: #8f8f8f;
 }
