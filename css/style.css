@@ -1,0 +1,323 @@
+body {
+  display: grid;
+  margin: 0 auto;
+  font-family: "Fira Sans", sans-serif;
+}
+
+nav,
+section,
+footer {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+a {
+  color: black;
+}
+
+.principal {
+  padding: 40px 30px;
+  display: grid;
+  grid-template-columns: minmax(100px, 350px) minmax(300px, 1fr);
+  gap: 140px;
+  align-items: center;
+}
+
+.principal-img img {
+  max-width: 100%;
+}
+
+.principal-conteudo {
+  max-width: 550px;
+  position: relative;
+}
+
+.principal-conteudo-titulo {
+  font-size: 72px;
+  line-height: 80px;
+  font-weight: bold;
+}
+
+.principal-conteudo-titulo::before {
+  display: inline-block;
+  content: url("../img/detalhe.svg");
+  z-index: -1;
+  position: absolute;
+  left: -35px;
+  top: -25px;
+}
+
+.principal-conteudo-texto {
+  font-size: 24px;
+  line-height: 24px;
+  color: #525252;
+  margin-top: 30px;
+}
+
+.experiencia {
+  padding: 80px 60px;
+  display: grid;
+  grid-template-columns: minmax(100px, 350px) minmax(300px, 1fr);
+}
+
+.experiencia-titulo {
+  font-size: 144px;
+  font-weight: bold;
+  line-height: 144px;
+  color: #e0e0e0;
+  word-wrap: break-word;
+}
+
+.experiencia-texto {
+  margin-left: 70px;
+  max-width: 560px;
+  color: #525252;
+  padding-left: 20px;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 50px;
+}
+
+.experiencia-texto span {
+  font-weight: bold;
+  color: #141414;
+}
+
+.experiencia-box {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.experiencia-box span {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  padding-top: 20px;
+  font-weight: 500;
+  color: #525252;
+}
+
+.experiencia-box-card {
+  display: flex;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 5px;
+  gap: 60px;
+  max-width: 630px;
+  justify-content: space-between;
+  border: 1px solid #f0f0f0;
+}
+
+.experiencia-box-card h2 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.box-titulo {
+  position: relative;
+  max-width: 330px;
+}
+
+/* .box-titulo h2::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 400px;
+  height: 200px;
+  color: blue;
+} */
+
+.box-titulo p {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #525252;
+}
+
+.box-resumo .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.box-resumo .tags span {
+  padding: 5px 10px;
+  background: #fff;
+  border-radius: 5px;
+  color: #141414;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.formacao-bg {
+  background: #141414;
+}
+
+.formacao {
+  color: white;
+  display: grid;
+  grid-template-columns: minmax(100px, 400px) minmax(300px, 1fr);
+  padding: 120px 0;
+}
+
+.formacao-titulo {
+  font-size: 144px;
+  font-weight: bold;
+  color: #000;
+  word-wrap: break-word;
+}
+
+.formacao-texto {
+  font-size: 24px;
+  line-height: 32px;
+  max-width: 520px;
+  color: #a3a3a3;
+  margin-bottom: 60px;
+  margin-left: 100px;
+}
+
+.formacao-texto span {
+  font-weight: bold;
+  color: #fff;
+}
+
+.formacao-cards {
+  display: flex;
+  gap: 30px;
+  margin-left: 100px;
+}
+
+.formacao-card {
+  padding: 20px;
+  background: #090909;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.formacao-card span {
+  display: inline-block;
+  color: #a3a3a3;
+  margin-bottom: 15px;
+}
+
+.formacao-card h2 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 50px;
+}
+
+.formacao-card p {
+  font-size: 18px;
+  line-height: 20px;
+  color: #a3a3a3;
+}
+
+.curso-idioma {
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-right: 25px;
+}
+
+.curso-idioma-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.curso-idioma-grid span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #8f8f8f;
+  margin-top: 3px;
+}
+
+.texto-carga-horaria {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+
+.texto-carga-horaria-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.texto-carga-horaria p {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.texto-carga-horaria span {
+  font-size: 18px;
+  line-height: 20px;
+  color: #8f8f8f;
+}
+
+.texto-idioma {
+  margin-left: 40px;
+  display: flex;
+  gap: 10px;
+}
+
+.texto-idioma span {
+  font-size: 18px;
+  line-height: 20px;
+  color: #8f8f8f;
+}
+
+.footer-bg {
+  background: #000;
+  color: white;
+  padding: 60px;
+}
+
+.footer-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 60px 0;
+  align-items: center;
+  gap: 100px;
+}
+
+.footer-conteudo-disponivel {
+  font-size: 24px;
+  line-height: 32px;
+  color: #cccccc;
+  max-width: 520px;
+}
+
+.footer-conteudo-contatos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+footer .copy {
+  font-size: 18px;
+  line-height: 32px;
+  color: #8f8f8f;
+}
